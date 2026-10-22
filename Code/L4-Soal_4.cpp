@@ -1,52 +1,49 @@
 #include <iostream>
-#include <iomanip>
+#include <string>
 using namespace std;
 
 int main() {
-    double nilai;
-    int kode;
+    const int admin = 5000;
+    string stambuk, nama;
+    int kode, jumlah;
+    double harga, subtotal, total;
 
-    cout << "=== Sistem Konversi Satuan Multifungsi ===" << endl;
-    cout << "Masukkan nilai : ";
-    cin >> nilai;
-    cout << "1. Meter ke Centimeter" << endl;
-    cout << "2. Kilometer ke Meter" << endl;
-    cout << "3. Kilogram ke Gram" << endl;
-    cout << "4. Jam ke Menit" << endl;
-    cout << "5. Celsius ke Fahrenheit" << endl;
-    cout << "Masukkan kode konversi : ";
-    cin >> kode;
+    cout << "Sistem Pembayaran Praktikum" << endl;
+    cout << "Masukkan stambuk : "; cin >> stambuk;
+    cout << "1. Cetak Modul Praktikum - Rp35000" << endl;
+    cout << "2. Penggantian Kartu Praktikum - Rp25000" << endl;
+    cout << "3. Cetak Sertifikat - Rp50000" << endl;
+    cout << "4. Penggunaan Laboratorium Tambahan - Rp75000" << endl;
+    cout << "5. Pelatihan Tambahan - Rp100000" << endl;
+    cout << "Masukkan kode layanan : "; cin >> kode;
+    cout << "Masukkan jumlah layanan : "; cin >> jumlah;
 
-    cout << fixed << setprecision(2);
     switch (kode) {
         case 1:
-            cout << "Nilai Awal     : " << nilai << " Meter" << endl;
-            cout << "Jenis Konversi : Meter ke Centimeter" << endl;
-            cout << "Hasil Konversi : " << nilai * 100 << " Centimeter" << endl;
-            break;
+            nama = "Cetak Modul Praktikum"; harga = 35000; break;
         case 2:
-            cout << "Nilai Awal     : " << nilai << " Kilometer" << endl;
-            cout << "Jenis Konversi : Kilometer ke Meter" << endl;
-            cout << "Hasil Konversi : " << nilai * 1000 << " Meter" << endl;
-            break;
+            nama = "Penggantian Kartu Praktikum"; harga = 25000; break;
         case 3:
-            cout << "Nilai Awal     : " << nilai << " Kilogram" << endl;
-            cout << "Jenis Konversi : Kilogram ke Gram" << endl;
-            cout << "Hasil Konversi : " << nilai * 1000 << " Gram" << endl;
-            break;
+            nama = "Cetak Sertifikat"; harga = 50000; break;
         case 4:
-            cout << "Nilai Awal     : " << nilai << " Jam" << endl;
-            cout << "Jenis Konversi : Jam ke Menit" << endl;
-            cout << "Hasil Konversi : " << nilai * 60 << " Menit" << endl;
-            break;
+            nama = "Penggunaan Laboratorium Tambahan"; harga = 75000; break;
         case 5:
-            cout << "Nilai Awal     : " << nilai << " Celsius" << endl;
-            cout << "Jenis Konversi : Celsius ke Fahrenheit" << endl;
-            cout << "Hasil Konversi : " << (nilai * 9 / 5) + 32 << " Fahrenheit" << endl;
-            break;
+            nama = "Pelatihan Tambahan"; harga = 100000; break;
         default:
-            cout << "Kode konversi tidak tersedia." << endl;
+            cout << "Kode layanan tidak ditemukan." << endl;
+            return 0;
     }
 
+    subtotal = harga * jumlah; total = subtotal + admin;
+    cout << " " << endl;
+    cout << "=== Bukti Pembayaran ===" << endl;
+    cout << "Stambuk            : " << stambuk << endl;
+    cout << "Kode Layanan       : " << kode << endl;
+    cout << "Nama Layanan       : " << nama << endl;
+    cout << "Harga Satuan       : Rp" << harga << endl;
+    cout << "Jumlah Layanan     : " << jumlah << endl;
+    cout << "Subtotal           : Rp" << subtotal << endl;
+    cout << "Biaya Administrasi : Rp" << admin << endl;
+    cout << "Total Pembayaran   : Rp" << total << endl;
     return 0;
 }
