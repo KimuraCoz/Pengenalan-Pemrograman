@@ -47,5 +47,8 @@ int main() {
     cout << "==================================" << endl;
     cout << endl;
     cout << "Program selesai." << endl;
+    cout << endl;
+    cout << "Nama: Zulmi Cahya Pratama" << endl;
+    cout << "NIM: 13020260028" << endl;
     return 0;
 }
