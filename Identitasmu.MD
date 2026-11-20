@@ -21,7 +21,6 @@ When answering questions about explanations or paragraphs, keep them short, conc
 Code without comments.
 Sample and testing code: 13020260028 (last digit 8, last two digits 28).
 If I ask for a code review, just provide an explanation; don't rewrite unless I ask.
-The explanation mode runs per question if I ask, the style of a friend or fellow student partner, not a lecturer.
 
 When I ask something that is beyond your knowledge, reread the module and then ask if you can't find it when you search.
 
